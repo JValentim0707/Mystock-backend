@@ -1,10 +1,16 @@
 import express from 'express'
 const app = express()
+import cors from 'cors'
 
 // Routes
-import test from './test'
+import authRoute from './auth'
 
-app.use("/test", test);
+app.use(cors( {
+  origin: ' http://localhost:5173'
+}))
+
+app.use("/auth", authRoute);
+
 
 export default app
 

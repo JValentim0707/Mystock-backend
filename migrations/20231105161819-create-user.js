@@ -7,7 +7,8 @@ module.exports = {
         allowNull: false,
         autoIncrement: false,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
       },
       name: {
         allowNull: false,
@@ -26,11 +27,11 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE
       }
